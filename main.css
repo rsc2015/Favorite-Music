@@ -1,0 +1,23 @@
+body {
+    margin: 0;
+    font-family: Arial;
+}
+
+.header {
+    text-align: center;
+    padding: 32px;
+}
+.flex-container {
+    display: flex;
+    background-color: rgb(252, 196, 146);
+    height: 1000px;
+  }
+  
+  .flex-container>div {
+    background-color: #f1f1f1;
+    margin: 20px;
+    padding:10px;
+    font-size: 18px;
+    text-align: center;
+    width: 30%;
+  }
