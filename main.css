@@ -21,3 +21,13 @@ body {
     text-align: center;
     width: 30%;
   }
+
+  .flex-container  ul {
+    text-align: left;
+    padding-left: 100px;
+   padding-top :15px;
+  }
+
+  .flex-container  h2 {
+    padding: 40px 0;
+  }
