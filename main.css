@@ -18,16 +18,46 @@ body {
     margin: 20px;
     padding:10px;
     font-size: 18px;
-    text-align: center;
+  text-align: center;
     width: 30%;
   }
 
   .flex-container  ul {
     text-align: left;
     padding-left: 100px;
-   padding-top :15px;
+   padding-top :12px;
   }
 
   .flex-container  h2 {
-    padding: 40px 0;
+    padding: 20px 0;
   }
+
+  #radioButton{ 
+      width: 100%;
+      margin: auto 0;
+      text-align: center;
+  }
+
+  #addToList{ 
+    font-size: 18px;
+    
+}
+
+#radioButton>input{ 
+    
+    padding: 2px 4px;
+    
+}
+
+#btn-addToList{
+    font-size: 18px;
+    padding: 2px 4px;
+    margin-left:5px;
+    cursor: pointer;
+
+}
+#btn-addToList:hover {
+    background-color: rgb(252, 196, 146);
+    color: white;
+    
+}
