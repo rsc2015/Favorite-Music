@@ -12,53 +12,53 @@ artists.forEach(function(artist) {
     artistList.innerHTML += `<ul><li>
                          ${artist} 
                           </li></ul>`
-       //console.log(artists);
-});
-
-const songList = document.getElementById("songs");
-
-songs.forEach(function(song) {
-    songList.innerHTML += `<ul><li>
-                         ${song} 
-                          </li></ul>`
        
 });
-//console.log(songs);
+console.log(artistList);
+
+const songList = document.getElementById("songs");
+songs.forEach(function(song) {
+    songList.innerHTML = `<ul><li>
+                         ${song} 
+                          </li></ul>`
+});
+console.log(songList);
 
 const albumList = document.getElementById("albums");
-
 albums.forEach(function(album) {
     albumList.innerHTML += `<ul><li>
                          ${album} 
-                          </li></ul>`
-       
+						  </li></ul>`;
+						  
 });
 console.log(albumList);
 /*Using a form; Add 2 more songs.
-Each song should be added to the end of the song array.
+
 Each artist should be added to the beginning of the artist array.
-Each album should be added to the end of the album array.
+
 For each output element arrange the corresponding data as follows:
-Output vertically descending alphabetically.
-Output vertically ascending alphabetically.
+VD Output vertically descending alphabetically.
+VA Output vertically ascending alphabetically.
 Output vertically exactly as the data was added.
-Output vertically exactly as the data was added, inverted.
-Output horizontally descending alphabetically, separated by ,.
+reverse Output vertically exactly as the data was added, inverted.
+join(,)Output horizontally descending alphabetically, separated by ,.
 Output horizontally ascending alphabetically, separated by >>.
 Output horizontally exactly as the data was added, separated by :.
 Output horizontally exactly as the data was added, inverted, separated by |.
 Each output area should be separated by a headline tag.*/
+
+//button that submits & adds to the list below
 let addNew = document.getElementById("btn-addToList");
 addNew.addEventListener("click", function(){
-addArtist(newToList);
+//addArtist(newToList);
 
-getArtist();
-	var newToList = document.getElementById("addToList").value;
-	//which side
+//getArtist();
+	var newToList = document.getElementById("addToTheList").value;
+	////(addToList) is the radio button for selecting song, artist, album
 	var listSelected;
 	var radios = document.getElementsByName('whichList');
-	for (var i = 0, length = radios.length; i < length; i++) {
-		// 1 = song, 2 = album, 0 = artist
+	for (var i = 0; i < radios.length; i++) {
+		// radios option are 1 = song, 2 = album, 0 = artist
 	    if (radios[i].checked) {
 	        listSelected = radios[i].value;
 	        break;
@@ -66,19 +66,40 @@ getArtist();
 	}
 	console.log("listSelected", listSelected);
 	if (Number(listSelected) === 0){
+		console.log("zero");
 		addArtist(newToList);
-        //console.log("new jedi list", lightside.getJedi());
-         console.log("new artist list", getArtist());
+        //console.log("new artist list", getArtist());
 
 	}else if (Number(listSelected) === 1){
 		console.log("one");
-		lightside.setPlayer(newPlayerName);
-		console.log("new player list", lightside.getPlayer());
+		addSong(newToList);
+		
+		//console.log("newsonglist", addSong());
 	}else if (Number(listSelected) === 2){
-		darkside.setEvil(newPlayerName);
-		console.log("new evil list", darkside.getEvil());
+		console.log("two");
+		addAlbum(newToList);
+		//console.log("new Album list", addAlbum());
 	}
 });
 
+//Each artist should be added to the beginning of the artist array.
+let addArtist = function(a){
+	artists.unshift(a);
+	console.log("new artists list", artists);
+	return artistList;
+};
+
+//Each song should be added to the end of the song array.
+let addSong = function(s){
+	songs.push(s);
+	console.log("new song list", songs);
+	return songList;
+};
 
 
+//Each album should be added to the end of the album array.
+let addAlbum = function(al){
+	albums.unshift(al);
+	console.log("new albums list", albums);
+	return albums;
+};
