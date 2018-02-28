@@ -6,19 +6,19 @@
     <title>Favoritemusic</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 </head>
 <body>
-        <div class="header">
-                <h1>Favorite Music</h1>
-                <div id="radioButton"><p>Choose your list:  
-                    <input type="radio" name="whichList" value="1" checked>Artist
-                    <input type="radio" name="whichList" value="2">Song
-                    <input type="radio" name="whichList" value="0">Album </p>  <!--<label>Add to the list below:</label>-->
-                    <input id="addToList" type="text" placeholder="Add To The List" size="35" >
     
-	
-
+  <div class="header">
+    <h1>Favorite Music</h1>
+      <div id="radioButton"><p>Choose your list:  
+        <input type="radio" name="whichList" value="0" checked>Artist
+        <input type="radio" name="whichList" value="1">Song
+        <input type="radio" name="whichList" value="2">Album </p>  <!--<label>Add to the list below:</label>-->
+        <input type="text"  id="addToTheList"  placeholder="Add To The List" size="35" >
 	<button id="btn-addToList">Add To The List</button></div>
               </div>
         <div class="flex-container">
@@ -26,6 +26,7 @@
                 <div id="songs"><h2>Songs</h2></div>
                 <div id="albums"><h2>Album</h2></div>  
               </div>
+             
     <script src="arraymethods.js"></script>
 </body>
 </html>
