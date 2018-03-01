@@ -13,7 +13,7 @@
  - Each song should be added to the end of the song array.
  - Each artist should be added to the beginning of the artist array.
  - Each album should be added to the end of the album array.
-- [ ]For each output element arrange the corresponding data as follows:
+- [ ] For each output element arrange the corresponding data as follows:
  - Output vertically descending alphabetically.
  - Output vertically ascending alphabetically.
  - Output vertically exactly as the data was added.
