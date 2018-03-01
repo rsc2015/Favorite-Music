@@ -6,8 +6,8 @@ let songs = ["Out 0f my head", "Bad at Love", "Gone", "Secrets", "Glory", "Suppl
 
 let albums = ["Pop 2", "Hopeless Fountain Kingdom", "Hudson", "Starboy", "Wild World", "Man of the Woods", "Blurryface", "Reputation", "Hozier album", "Scary Hours"];
 
-const artistList = document.getElementById("artists");
 
+const artistList = document.getElementById("artists");
 artists.forEach(function(artist) {
     artistList.innerHTML += `<ul><li>
                          ${artist} 
@@ -18,7 +18,7 @@ console.log(artistList);
 
 const songList = document.getElementById("songs");
 songs.forEach(function(song) {
-    songList.innerHTML = `<ul><li>
+    songList.innerHTML += `<ul><li>
                          ${song} 
                           </li></ul>`
 });
@@ -50,9 +50,6 @@ Each output area should be separated by a headline tag.*/
 //button that submits & adds to the list below
 let addNew = document.getElementById("btn-addToList");
 addNew.addEventListener("click", function(){
-//addArtist(newToList);
-
-//getArtist();
 	var newToList = document.getElementById("addToTheList").value;
 	////(addToList) is the radio button for selecting song, artist, album
 	var listSelected;
@@ -83,23 +80,26 @@ addNew.addEventListener("click", function(){
 });
 
 //Each artist should be added to the beginning of the artist array.
+//the artist in the console log is being added to the beginning of the array but 
+//in the DOM it is being added to the end of the list.
 let addArtist = function(a){
 	artists.unshift(a);
 	console.log("new artists list", artists);
-	return artistList;
+	return artistList.innerHTML += `<ul><li>${a}</li></ul>`;
 };
 
 //Each song should be added to the end of the song array.
+
 let addSong = function(s){
 	songs.push(s);
 	console.log("new song list", songs);
-	return songList;
+	return songList.innerHTML += `<ul><li>${s}</li></ul>`;
 };
 
 
 //Each album should be added to the end of the album array.
 let addAlbum = function(al){
-	albums.unshift(al);
+	albums.push(al);
 	console.log("new albums list", albums);
-	return albums;
+	return albumList.innerHTML  += `<ul><li>${al}</li></ul>`;
 };
