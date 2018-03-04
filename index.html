@@ -15,20 +15,28 @@
   <div class="header">
     <h1>Favorite Music</h1>
       <div id="radioButton"><p>Choose your list:  
-        <input type="radio" name="whichList" value="0" checked>Artist
-        <input type="radio" name="whichList" value="1">Song
-        <input type="radio" name="whichList" value="2">Album </p>  <!--<label>Add to the list below:</label>-->
-        <input type="text"  id="addToTheList"  placeholder="Add To The List" size="35" >
-	<button id="btn-addToList">Add To The List</button></div>
-              </div>
-<input id="cb1" type="checkbox" value="childOne" onClick=""><label for="cb1"> <b>Horizontally</b></label>
-<input id="cb2" type="checkbox" value="childTwo" onClick=""><label for="cb2"><b>Remove Reverse Sort</b></label>
-<input id="cb3" type="checkbox" value="childThree" onClick=""><label for="cb3"><b>Remove Inverted</b></label>
-        <div class="flex-container">
+          <input type="radio" name="whichList" value="0" checked>Artist
+          <input type="radio" name="whichList" value="1">Song
+          <input type="radio" name="whichList" value="2">Album </p>  <!--<label>Add to the list below:</label>-->
+          <input type="text"  id="addToTheList"  placeholder="Add To The List" size="35" >
+          <button id="btn-addToList">Add To The List</button>
+      </div><!--radioButton-->
+      <div id="displayListbtn">
+            <input id="cb1" type="radio" value="child1" name="displayHow"><label for="cb1"><b></b>Vertically Descending </b></label>
+            <input id="cb2" type="radio" value="child2" name="displayHow"><label for="cb2"><b>Vertically Ascending</b></label>
+            <input id="cb3" type="radio" value="child3" name="displayHow"><label for="cb3"><b>Vertically AA</b></label>
+            <input id="cb4" type="radio" value="child4" name="displayHow"><label for="cb4"><b>Reverse Vertically AA</b></label>
+            <input id="cb5" type="radio" value="child5" name="displayHow"><label for="cb5"><b>Horizontally Descending</b>(,)</label>
+            <input id="cb6" type="radio" value="child6" name="displayHow"><label for="cb6"><b>Horizontally Ascending </b>(>>)</label>
+            <input id="cb7" type="radio" value="child7" name="displayHow"><label for="cb7"><b>Horizontally AA</b>(:)</label>
+            <input id="cb8" type="radio" value="child8" name="displayHow"><label for="cb8"><b>Reverse Horizontally AA</b>(|)</label>
+      </div><!--displayListbtn-->
+  </div><!--header-->
+<div class="flex-container" id ="allList">
                 <div id="artists"><h2>Artist</h2></div>
                 <div id="songs"><h2>Songs</h2></div>
                 <div id="albums"><h2>Album</h2></div>  
-              </div>
+</div><!--allList-->
              
     <script src="arraymethods.js"></script>
 </body>
